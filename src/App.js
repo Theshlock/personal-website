@@ -3,9 +3,9 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Services from './components/pages/Services';
-import Products from './components/pages/Products';
-import SignUp from './components/pages/SignUp';
+import MketBot from './components/pages/MketBot';
+import Flipic from './components/pages/Flipic';
+import SignUp from './components/pages/Doctra';
 
 function App() {
   return (
@@ -14,9 +14,13 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/services' component={Services} />
-          <Route path='/products' component={Products} />
-          <Route path='/sign-up' component={SignUp} />
+          <Route path='/MketBot' component={MketBot} />
+          <Route path='/Flipic' component={Flipic} />
+          <Route path='/Doctra' component={SignUp} />
+          <Route path='/flipic_git' component={() => { window.location.href = 'https://github.com/bryanwongyk/flipic'; }}/>
+          <Route path='/flipic_award' component={() => { window.location.href = 'https://devpost.com/software/flipic'; }}/>
+          <Route path='/flipic_page' component={() => { window.location.href = 'https://www.flipic.net/'; }}/>
+
         </Switch>
       </Router>
     </>
